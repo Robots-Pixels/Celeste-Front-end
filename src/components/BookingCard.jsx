@@ -22,7 +22,6 @@ export default function BookingCard() {
     const [successful, setSuccessful] = useState(false);
 
     const handleChange = (e) => {
-      console.log(formData);
         setFormData({
             ...formData,
             [e.target.id]: e.target.value

@@ -29,7 +29,6 @@ export default function StickyHeader({scrolled}) {
     useEffect(() => {
         const handleResize = () => {
             setIsSmall(window.innerWidth < 770);
-            console.log(window.innerWidth);
         }
         window.addEventListener("resize", handleResize);
         handleResize();
@@ -38,7 +37,6 @@ export default function StickyHeader({scrolled}) {
 
     useEffect(() => {
         const handleClickOutside = () => {
-            console.log(clicked);
             if (!clicked){
                 setTransformSide("-700px");
                 setTransformMini("500px");
