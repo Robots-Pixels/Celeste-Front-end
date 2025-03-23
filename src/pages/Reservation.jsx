@@ -14,7 +14,10 @@ export default function Reservation() {
         bigDay: "",
         bigEmail: "",
         bigMessage: ""
-    })
+    });
+
+    const API_BASE_URL = "celeste-back-end-production.up.railway.app";
+
     const navigate = useNavigate();
 
     const [error, setError] = useState(null);
@@ -22,7 +25,6 @@ export default function Reservation() {
     const [successful, setSuccessful] = useState(false);
 
     const handleChange = (e) => {
-      console.log(formData);
         setFormData({
             ...formData,
             [e.target.id]: e.target.value
@@ -33,7 +35,7 @@ export default function Reservation() {
         e.preventDefault();
         setLoading(true);
 
-        const res = await fetch("http://localhost:3000/api/reservation/newReservation",
+        const res = await fetch(`${API_BASE_URL}/api/reservation/newReservation`,
             {
                 method: "POST",
                 headers: {
