@@ -1,0 +1,291 @@
+@import "tailwindcss";
+
+/* ====== Initialisation ====== */
+
+:root {
+    --primary-color: #cd9d4b;
+    --background-color: #161616;
+    --secondary-color: #fff;
+    /* color: #322D29;
+    color: #72383d; 
+    color: #800020;
+    color: #ac9c8d;
+    color: #d1c7bd;
+    color: #d9d9d9;
+    color: #efe9e1; */
+}
+
+#root{
+    position: relative;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.oswald{
+    font-family: "Oswald", sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus,
+button:focus-visible {
+    outline: none;
+}
+
+/* ====== GENERAL ====== */
+
+body {
+    background: var(--background-color);
+    color: #fefefe;
+    font-family: "Merriweather", serif;
+}
+
+p{
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+select option {
+    color: #161616;
+}
+
+/* ====== HEADER ====== */
+
+.cta-link {
+    background: #cd9d4b;
+    padding: 0.6rem 1rem;
+}
+
+.nav-link {
+    position: relative;
+    transition: all 0.5s;
+}
+
+.nav-link a::before {
+    content: "";
+    height: 2px;
+    background: #cd9d4b;
+    position: absolute;
+    border-radius: 20px;
+    width: 0%;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    color: #cd9d4b;
+}
+
+.nav-link:hover a::before {
+    width: 100%;
+    right: 0;
+}
+
+
+@keyframes moveDot1 {
+    0% {
+        transform: translateX(0px) translateY(0px);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(-85px) translateY(30px);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateX(-170px) translateY(60px);
+        opacity: 1;
+    }
+}
+@keyframes moveDot2 {
+    0% {
+        transform: translateX(0px) translateY(0px);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(85px) translateY(40px);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateX(170px) translateY(80px);
+        opacity: 1;
+    }
+}
+@keyframes moveDot3 {
+    0% {
+        transform: translateX(0px) translateY(0px);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(0px) translateY(40px);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateX(0px) translateY(80px);
+        opacity: 1;
+    }
+}
+@keyframes moveDot4 {
+    0% {
+        transform: translateX(0px) translateY(0px);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(0px) translateY(-40px);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateX(0px) translateY(-80px);
+        opacity: 1;
+    }
+}
+@keyframes moveDot5 {
+    0% {
+        transform: translateX(0px) translateY(0px);
+        opacity: 1;
+    }
+
+    20% {
+        transform: translateX(85px) translateY(30px);
+        opacity: 0.2;
+    }
+
+    40% {
+        transform: translateX(170px) translateY(60px);
+        opacity: 0.4;
+    }
+
+    60% {
+        transform: translateX(85px) translateY(30px);
+        opacity: 0.6;
+    }
+
+    80% {
+        transform: translateX(0px) translateY(0px);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateX(-30px) translateY(-30px);
+        opacity: 1;
+    }
+}
+@keyframes moveDot6 {
+    0% {
+        transform: translateX(0px) translateY(0px);
+        opacity: 0.2;
+    }
+
+    20% {
+        transform: translateX(85px) translateY(-20px);
+        opacity: 0.4;
+    }
+
+    40% {
+        transform: translateX(170px) translateY(-40px);
+        opacity: 0.6;
+    }
+
+    60% {
+        transform: translateX(85px) translateY(-60px);
+        opacity: 0.6;
+    }
+
+    80% {
+        transform: translateX(0px) translateY(0px);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateX(-30px) translateY(-30px);
+        opacity: 1;
+    }
+}
+
+.cta-link {
+    transition: all 0.3s ease-out;
+}
+
+.cta-link:hover {
+    box-shadow: 0px 0px 10px 3px #cd9d4b;
+}
+
+.dot1 {
+    animation: moveDot1 5s infinite linear;
+}
+.dot2 {
+    animation: moveDot2 7s infinite linear;
+}
+.dot3 {
+    animation: moveDot3 5s infinite linear;
+
+}
+.dot4 {
+    animation: moveDot4 6s infinite linear;
+}
+.dot5 {
+    animation: moveDot5 12s infinite linear;
+}
+.dot6 {
+    animation: moveDot6 12s infinite linear;
+}
+
+.footer-section{
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.footer-section::after{
+    position: absolute;
+    left:0px;
+    bottom: -10px;
+    content: "";
+    width: 70%;
+    height: 2px;
+    border-radius: 100px;
+    background: #cd9d4b;
+}
+
+@media (max-width: 72rem) {
+    .bottom-hero{
+        flex-direction: column;
+    }
+
+    .reservation-mini{
+        position: static;
+        width: 100%;
+        height: 100%;
+    }
+
+    .restaurant-info{
+        margin-bottom: 2rem;
+    }
+
+    .restaurant-info-div{
+        width: 100%;
+    }
+
+    .reservation-form-div{
+        flex-direction: column;
+    }
+}
