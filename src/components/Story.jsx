@@ -7,7 +7,7 @@ export default function Story() {
     
             <div className='bg-cover bg-center flex flex-col-reverse md:flex-row justify-between' style={{backgroundImage: `url(${bgBlack})`}}>
 
-              <div className='bg-cover bg-center md:flex-1 h-[50vh] md:h-[90vh] z-1 relative' style={{backgroundImage: `url(${"https://images.pexels.com/photos/331107/pexels-photo-331107.jpeg"})`}}>
+              <div className='bg-cover bg-center md:flex-1 h-[50vh] md:h-[90vh] z-1 relative' style={{backgroundImage: `url(${"/story.jpeg"})`}}>
                 <div className='absolute left-0 top-0 w-full h-full bg-black opacity-30'>
                 
                 </div>  

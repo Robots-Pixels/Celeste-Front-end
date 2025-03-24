@@ -8,84 +8,84 @@ export default function Menu() {
 
     const [menu, setMenu] = useState([
         {
-          image: "https://olivesetgourmandises.com/cdn/shop/articles/tartare-homard.jpg",
+          image: "/menu1.jpg",
           name: "Lobster Tartare",
           price: "22",
           description: "Fresh lobster with citrus zest, avocado cream, and delicate herbs.",
           category: "Starters",
         },
         {
-          image: "https://img.delicious.com.au/fyQQIMGY/del/2019/07/mushroom-and-truffle-soup-110674-2.jpg",
+          image: "/menu2.jpg",
           name: "Truffle Mushroom Velouté",
           price: "16",
           description: "Smooth wild mushroom soup drizzled with white truffle oil.",
           category: "Starters",
         },
         {
-          image: "https://images.immediate.co.uk/production/volatile/sites/2/2014/12/3302.jpg",
+          image: "/menu3.jpg",
           name: "Caramelized Onion & Goat Cheese Tart",
           price: "14",
           description: "Flaky tart with sweet onions, goat cheese, and balsamic glaze.",
           category: "Starters",
         },
         {
-          image: "https://www.jocooks.com/wp-content/uploads/2023/12/smoked-salmon-blinis-1-28.jpg",
+          image: "/menu4.jpg",
           name: "Smoked Salmon Blinis",
           price: "18",
           description: "Mini pancakes topped with smoked salmon and lemon crème fraîche.",
           category: "Starters",
         },
         {
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIWZGfZ3DTPMjMo4wyOac-vVDgEqX0Cybg0Q&s",
+            image: "/menu5.jpeg",
             name: "Herb-Crusted Lamb Chops",
             price: "38",
             description: "Juicy lamb chops with herb crust and rosemary potatoes.",
             category: "Mains",
           },
           {
-            image: "https://omnivorescookbook.com/wp-content/uploads/2015/12/1512_Pan-Seared-Duck-Breast-with-Persimmon-Grapefruit-Sauce_005.jpg",
+            image: "/menu6.jpg",
             name: "Seared Duck Breast",
             price: "34",
             description: "Perfectly seared duck breast with orange glaze and seasonal greens.",
             category: "Mains",
           },
           {
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnvCJ-M7JD8rOo-hpts3P_4Gf7jjmB7TCLzA&s",
+            image: "/menu7.jpeg",
             name: "Grilled Sea Bass",
             price: "30",
             description: "Fresh sea bass with lemon butter sauce and sautéed vegetables.",
             category: "Mains",
           },
           {
-            image: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee",
+            image: "/menu8.jpeg",
             name: "Filet Mignon",
             price: "42",
             description: "Tender filet mignon with red wine reduction and creamy mash.",
             category: "Mains",
           },
           {
-            image: "https://images.unsplash.com/photo-1601979031925-9d7f84f6e1e3",
+            image: "/menu9.jpeg",
             name: "Vanilla Crème Brûlée",
             price: "12",
             description: "Classic vanilla custard with a caramelized sugar crust.",
             category: "Desserts",
           },
           {
-            image: "https://images.unsplash.com/photo-1608757726983-08be57d75f79",
+            image: "/menu10.jpeg",
             name: "Dark Chocolate Fondant",
             price: "14",
             description: "Rich molten chocolate cake with vanilla ice cream.",
             category: "Desserts",
           },
           {
-            image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc",
+            image: "/menu11.jpeg",
             name: "Lemon & Basil Sorbet",
             price: "10",
             description: "Refreshing sorbet with bright lemon and fresh basil.",
             category: "Desserts",
           },
           {
-            image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092",
+            image: "/menu12.jpeg",
             name: "Pistachio Panna Cotta",
             price: "13",
             description: "Silky panna cotta with roasted pistachios and berry coulis.",
@@ -98,7 +98,7 @@ export default function Menu() {
 
     <div className="flex flex-col">
 
-        <Hero image={"https://images.pexels.com/photos/1833349/pexels-photo-1833349.jpeg"} title={"MENU"} subtitle={"Explore our menu and experience gourmet cuisine — carefully prepared dishes that delight every palate."}/>
+        <Hero image={"/menu.jpeg"} title={"MENU"} subtitle={"Explore our menu and experience gourmet cuisine — carefully prepared dishes that delight every palate."}/>
         
         <section className='z-1 bg-center bg-cover py-30' style={{backgroundImage: `url(${bgBlack})`}}>
 
@@ -115,7 +115,7 @@ export default function Menu() {
                                 
                             {
                                 menu.filter((dish) => dish.category === "Starters").map((dish) => (
-                                    <MenuItem image={dish.image} name={dish.name} price={dish.price} description={dish.description}/>
+                                    <MenuItem key={dish.name} image={dish.image} name={dish.name} price={dish.price} description={dish.description}/>
                                 ))
                             }
                             </div>
@@ -132,7 +132,7 @@ export default function Menu() {
                                 
                             {
                                 menu.filter((dish) => dish.category === "Mains").map((dish) => (
-                                    <MenuItem image={dish.image} name={dish.name} price={dish.price} description={dish.description}/>
+                                    <MenuItem key={dish.name} image={dish.image} name={dish.name} price={dish.price} description={dish.description}/>
                                 ))
                             }
                             </div>
@@ -149,7 +149,7 @@ export default function Menu() {
                                 
                             {
                                 menu.filter((dish) => dish.category === "Desserts").map((dish) => (
-                                    <MenuItem image={dish.image} name={dish.name} price={dish.price} description={dish.description}/>
+                                    <MenuItem key={dish.name} image={dish.image} name={dish.name} price={dish.price} description={dish.description}/>
                                 ))
                             }
                             </div>

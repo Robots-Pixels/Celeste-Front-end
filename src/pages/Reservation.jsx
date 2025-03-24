@@ -16,7 +16,7 @@ export default function Reservation() {
         bigMessage: ""
     });
 
-    const API_BASE_URL = "celeste-back-end-production.up.railway.app";
+    const API_BASE_URL = "celeste-back-end-productione.up.railway.app";
 
     const navigate = useNavigate();
 

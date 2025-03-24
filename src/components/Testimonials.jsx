@@ -23,7 +23,7 @@ export default function Testimonials() {
 
       <div className="flex flex-col md:flex-row justify-between gap-3 md:gap-6">
 
-        <div className="bg-red-100 w-30 bg-center bg-cover md:w-48 aspect-square border-1 border-[#cd9d4b]" style={{backgroundImage:`url("https://www.theladders.com/wp-content/uploads/man_outside_091318.jpg")`}}/>
+        <div className="bg-red-100 w-30 bg-center bg-cover md:w-48 aspect-square border-1 border-[#cd9d4b]" style={{backgroundImage:`url("/profile.jpg")`}}/>
 
         <div className="bg-[#ffffffb7] w-[0.1rem]"/>
 

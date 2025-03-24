@@ -3,7 +3,6 @@ import HomeHero from '../components/HomeHero'
 import { FaPhone, FaMapPin, FaClock } from 'react-icons/fa'
 import SectionTitle from '../components/SectionTitle'
 import CoreFeatures from '../components/CoreFeatures'
-import About from './About'
 import Story from '../components/Story'
 import Signature from '../components/Signature'
 import MiniMenu from '../components/MiniMenu'
@@ -134,21 +133,21 @@ export default function Home() {
 
       </section>
 
-      <SectionTitle bg={"https://images.pexels.com/photos/9566086/pexels-photo-9566086.jpeg"} title={"WHO ARE WE ?"}/>
+      <SectionTitle bg={"/back1.jpeg"} title={"WHO ARE WE ?"}/>
 
       <Story/>
 
       <CoreFeatures/>
 
-      <SectionTitle bg={"https://images.pexels.com/photos/359993/pexels-photo-359993.jpeg"} />
+      <SectionTitle bg={"/back2.jpeg"} />
 
       <Signature/>
 
-      <SectionTitle bg={"https://images.pexels.com/photos/359993/pexels-photo-359993.jpeg"} />
+      <SectionTitle bg={"/back2.jpeg"} />
 
       <MiniMenu/>
 
-      <SectionTitle bg={"https://images.pexels.com/photos/1269025/pexels-photo-1269025.jpeg"} title={"TESTIMONIALS"}/>
+      <SectionTitle bg={"/back3.jpeg"} title={"TESTIMONIALS"}/>
 
       <div className='flex flex-col relative'>
 
@@ -158,7 +157,7 @@ export default function Home() {
 
       </div>
 
-      <SectionTitle bg={"https://images.pexels.com/photos/460537/pexels-photo-460537.jpeg"} title={"RESERVATION"}/>
+      <SectionTitle bg={"/back4.jpeg"} title={"RESERVATION"}/>
 
       <BookingCard/>
 

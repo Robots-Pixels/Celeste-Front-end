@@ -16,7 +16,7 @@ export default function Gallery() {
 
   return (
     <div className='flex flex-col'>
-        <Hero image={"https://images.pexels.com/photos/31125216/pexels-photo-31125216.jpeg"} title={"GALLERY"} subtitle={"Browse our gallery and discover the art of fine dining at Celeste — exquisite dishes and serene ambiance."}/>
+        <Hero image={"/gallery.webp"} title={"GALLERY"} subtitle={"Browse our gallery and discover the art of fine dining at Celeste — exquisite dishes and serene ambiance."}/>
 
         <section className='z-1 bg-center bg-cover py-30' style={{backgroundImage: `url(${bgBlack})`}}>
 

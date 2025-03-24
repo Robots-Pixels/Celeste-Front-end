@@ -9,7 +9,7 @@ export default function Signature() {
     
             <div className='bg-cover bg-center flex flex-col md:flex-row-reverse justify-between' style={{backgroundImage: `url(${bgBlack})`}}>
 
-              <div className='bg-cover bg-center md:flex-1 h-[50vh] md:h-[90vh] z-1 relative' style={{backgroundImage: `url(${"https://images.pexels.com/photos/20150646/pexels-photo-20150646/free-photo-of-assiette-repas-homard-photo-de-nourriture.jpeg"})`}}>
+              <div className='bg-cover bg-center md:flex-1 h-[50vh] md:h-[90vh] z-1 relative' style={{backgroundImage: `url(${"/signature.jpeg"})`}}>
                 <div className='absolute left-0 top-0 w-full h-full bg-black opacity-30'>
                 
                 </div>  

@@ -60,7 +60,7 @@ export default function Contact() {
 
   return (
     <div className='flex flex-col'>
-        <Hero image={"https://images.pexels.com/photos/31125216/pexels-photo-31125216.jpeg"} title={"CONTACT US"} subtitle={"Connect with Celeste. Whether for inquiries, reservations, or special requests, we look forward to hearing from you."}/>
+        <Hero image={"/contact.webp"} title={"CONTACT US"} subtitle={"Connect with Celeste. Whether for inquiries, reservations, or special requests, we look forward to hearing from you."}/>
 
         <section className='z-1 bg-center bg-cover py-30' style={{backgroundImage: `url(${bgBlack})`}}>
 

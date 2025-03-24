@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Hero from '../components/Hero.jsx'
 import ShinyButton from '../components/ShinyButton'
 import { useNavigate } from 'react-router-dom'
 import bgBlack from "../assets/bgBlack.jpg"
@@ -68,7 +67,7 @@ export default function BookingCard() {
 
         <div className='flex flex-col-reverse md:flex-row items-stretch'>
 
-          <div className='relative bg-cover bg-center flex-1 min-h-100' style={{backgroundImage: `url(${"https://images.pexels.com/photos/1484516/pexels-photo-1484516.jpeg"})`}}>
+          <div className='relative bg-cover bg-center flex-1 min-h-100' style={{backgroundImage: `url(${"/reservation.jpeg"})`}}>
             <div className='absolute bg-black/30 w-full h-full'/>
           </div>
           

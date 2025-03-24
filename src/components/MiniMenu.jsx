@@ -1,53 +1,55 @@
 import React, { useState } from 'react'
 import bgBlack from "../assets/bgBlack.jpg"
 import MenuItem from '../components/MenuItem'
-import { Link } from 'react-scroll'
 import ShinyButton from './ShinyButton'
 export default function MiniMenu() {
 
     const [menu, setMenu] = useState([
         {
-          image: "https://olivesetgourmandises.com/cdn/shop/articles/tartare-homard.jpg",
+          image: "/menu1.jpg",
           name: "Lobster Tartare",
           price: "22",
           description: "Fresh lobster with citrus zest, avocado cream, and delicate herbs.",
           category: "Starters",
         },
         {
-          image: "https://img.delicious.com.au/fyQQIMGY/del/2019/07/mushroom-and-truffle-soup-110674-2.jpg",
-          name: "Truffle Mushroom Velouté",
-          price: "16",
-          description: "Smooth wild mushroom soup drizzled with white truffle oil.",
+          image: "/menu4.jpg",
+          name: "Smoked Salmon Blinis",
+          price: "18",
+          description: "Mini pancakes topped with smoked salmon and lemon crème fraîche.",
           category: "Starters",
         },
         {
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIWZGfZ3DTPMjMo4wyOac-vVDgEqX0Cybg0Q&s",
+            image: "/menu5.jpeg",
             name: "Herb-Crusted Lamb Chops",
             price: "38",
             description: "Juicy lamb chops with herb crust and rosemary potatoes.",
             category: "Mains",
           },
           {
-            image: "https://omnivorescookbook.com/wp-content/uploads/2015/12/1512_Pan-Seared-Duck-Breast-with-Persimmon-Grapefruit-Sauce_005.jpg",
+            image: "/menu6.jpg",
             name: "Seared Duck Breast",
             price: "34",
             description: "Perfectly seared duck breast with orange glaze and seasonal greens.",
             category: "Mains",
           },
+
           {
-            image: "https://images.unsplash.com/photo-1601979031925-9d7f84f6e1e3",
-            name: "Vanilla Crème Brûlée",
-            price: "12",
-            description: "Classic vanilla custard with a caramelized sugar crust.",
+            image: "/menu10.jpeg",
+            name: "Dark Chocolate Fondant",
+            price: "14",
+            description: "Rich molten chocolate cake with vanilla ice cream.",
             category: "Desserts",
           },
+
           {
-            image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc",
-            name: "Lemon & Basil Sorbet",
-            price: "10",
-            description: "Refreshing sorbet with bright lemon and fresh basil.",
+            image: "/menu12.jpeg",
+            name: "Pistachio Panna Cotta",
+            price: "13",
+            description: "Silky panna cotta with roasted pistachios and berry coulis.",
             category: "Desserts",
           }
+
       ])
 
   return (
@@ -69,7 +71,7 @@ export default function MiniMenu() {
                                 
                             {
                                 menu.filter((dish) => dish.category === "Starters").map((dish) => (
-                                    <MenuItem image={dish.image} name={dish.name} price={dish.price} description={dish.description}/>
+                                    <MenuItem key={dish.name} image={dish.image} name={dish.name} price={dish.price} description={dish.description}/>
                                 ))
                             }
                             </div>
@@ -86,7 +88,7 @@ export default function MiniMenu() {
                                 
                             {
                                 menu.filter((dish) => dish.category === "Mains").map((dish) => (
-                                    <MenuItem image={dish.image} name={dish.name} price={dish.price} description={dish.description}/>
+                                    <MenuItem key={dish.name} image={dish.image} name={dish.name} price={dish.price} description={dish.description}/>
                                 ))
                             }
                             </div>
@@ -103,7 +105,7 @@ export default function MiniMenu() {
                                 
                             {
                                 menu.filter((dish) => dish.category === "Desserts").map((dish) => (
-                                    <MenuItem image={dish.image} name={dish.name} price={dish.price} description={dish.description}/>
+                                    <MenuItem key={dish.name} image={dish.image} name={dish.name} price={dish.price} description={dish.description}/>
                                 ))
                             }
                             </div>
