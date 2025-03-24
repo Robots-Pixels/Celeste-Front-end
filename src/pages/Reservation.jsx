@@ -3,8 +3,6 @@ import Hero from '../components/Hero.jsx'
 import ShinyButton from '../components/ShinyButton'
 import { useNavigate } from 'react-router-dom'
 import bgBlack from "../assets/bgBlack.jpg"
-import { meta } from '@eslint/js'
-
 
 export default function Reservation() {
 
@@ -18,7 +16,6 @@ export default function Reservation() {
     });
 
     const navigate = useNavigate();
-
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
     const [successful, setSuccessful] = useState(false);

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HomeHero from '../components/HomeHero'
 import { FaPhone, FaMapPin, FaClock } from 'react-icons/fa'
 import SectionTitle from '../components/SectionTitle'
@@ -9,9 +9,68 @@ import MiniMenu from '../components/MiniMenu'
 import Testimonials from '../components/Testimonials'
 import Numbers from '../components/Numbers'
 import BookingCard from '../components/BookingCard'
+import { useNavigate } from 'react-router-dom'
+
 
 export default function Home() {
+
+  const [bigFormData, setBigFormData] = useState({
+    bigFirstName: "",
+    bigLastName: "",
+    bigTime: "12:00am",
+    bigDay: "",
+    bigEmail: "",
+    bigMessage: ""
+  });
+
+      const navigate = useNavigate();
+
+      const [bigError, setBigError] = useState(null);
+      const [bigLoading, setBigLoading] = useState(false);
+      const [bidSuccessful, setBigSuccessful] = useState(false);
+
+    const handleBigChange = (e) => {
+        setBigFormData({
+            ...bigFormData,
+            [e.target.id]: e.target.value
+        });
+    }
+
+    const handleBigSubmit = async(e) => {
+        e.preventDefault();
+        setBigLoading(true);
+
+        const res = await fetch(`${import.meta.env.VITE_BACKEND_API_BASE_URL}/api/reservation/newReservation`,
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(bigFormData)
+            }
+        )
+
+        console.log(2);
+
+        const data = await res.json();
+        if (data.success === false){
+            setBigError(data.message);
+            setBigLoading(false);
+            return;
+        }
+
+        if (data.success === true){
+            setBigSuccessful(data.message);
+            setBigLoading(false);
+        }
+
+        setTimeout(() => {
+            navigate("/");
+        }, 2000);
+    }
+
   return (
+    
     <div className=''>
       <HomeHero/>
 
@@ -60,25 +119,25 @@ export default function Home() {
       <div className='reservation-mini md:absolute flex flex-col justify-center gap-2 md:right-0 md:bottom-0 bg-[#cd9d4b] w-full md:w-[35%] h-[300px] p-6'>
         <h3>BOOK A TABLE</h3>
 
-        <form>
+        <form onSubmit={handleBigSubmit}>
 
           <div className='flex flex-col gap-8 text-sm'>
 
             <div className='flex gap-4 justify-between reservation-form-div'>
 
-              <div className='border-b-1 border-b-white py-3 w-full'> <input type="text" placeholder='First Name' className='outline-none w-full'/> </div>
-              <div className='border-b-1 border-b-white py-3 w-full'> <input type="text" placeholder='Last Name' className='outline-none w-full'/> </div>
+              <div className='border-b-1 border-b-white py-3 w-full'> <input required id='bigFirstName' onChange={handleBigChange} value={bigFormData.bigFirstNamefirstName} type="text" placeholder='First Name' className='outline-none w-full'/> </div>
+              <div className='border-b-1 border-b-white py-3 w-full'> <input required id='bigLastName' onChange={handleBigChange} value={bigFormData.bigLastName} type="text" placeholder='Last Name' className='outline-none w-full'/> </div>
               
             </div>
 
             <div className='flex gap-4 justify-between reservation-form-div'>
 
               <div className='border-b-1 border-b-white py-3 w-full'> 
-                <input type="date" placeholder='Date' className='outline-none w-full'/>  
+                <input required type="date" id='bigDay' onChange={handleBigChange} value={bigFormData.bigDay} placeholder='Date' className='outline-none w-full'/>  
               </div>
 
               <div className='border-b-1 border-b-white py-3 w-full'> 
-                <select className='w-full outline-none'>
+                <select required className='w-full outline-none' id='bigTime' onChange={handleBigChange} value={bigFormData.bigTime}>
                   <option value="12:00am">12:00am</option>
                   <option value="12:30pm">12:30pm</option>
                   <option value="1:00pm">1:00pm</option>
@@ -106,20 +165,34 @@ export default function Home() {
               </div>
 
               <div className='border-b-1 border-b-white py-3 w-full'> 
-                <input type="text" placeholder='Phone' className='outline-none w-full'/>  
+                <input required id='bigEmail' onChange={handleBigChange} value={bigFormData.bigEmail} type="text" placeholder='Email' className='outline-none w-full'/>  
               </div>
 
             </div>
 
-            <div className='flex gap-4 justify-between z-3 items-center reservation-form-div'>
+            <div className='relative flex gap-4 justify-between z-3 items-center reservation-form-div'>
 
               <div className='border-b-1 border-b-white w-full h-[50px]'>
-                <textarea className='h-full w-full outline-none' placeholder='Message'></textarea>
+                <textarea id='bigMessage' onChange={handleBigChange} value={bigFormData.bigMessage} className='h-full w-full outline-none' placeholder='Message'></textarea>
               </div>
+
+                {
+                  bigError 
+                      &&
+                  <h4 className='absolute right-0 -bottom-6 text-xs text-[#000]'> {bigError} </h4>
+                }
+
+                {
+                  bidSuccessful 
+                      &&
+                  <h4 className='absolute right-0 -bottom-6 text-xs text-blue-900'> {bidSuccessful} </h4>
+                }
 
               <div className='flex items-center justify-center w-full h-[50px] cursor-pointer'>
                 <div className='flex justify-center items-center bg-white text-black w-full h-full'>
+                  <button>
                     CONFIRM
+                  </button>
                 </div>
               </div>
 

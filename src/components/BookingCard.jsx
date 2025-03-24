@@ -2,18 +2,17 @@ import React, { useState } from 'react'
 import ShinyButton from '../components/ShinyButton'
 import { useNavigate } from 'react-router-dom'
 import bgBlack from "../assets/bgBlack.jpg"
-import { meta } from '@eslint/js';
 
 
 export default function BookingCard() {
 
     const [formData, setFormData] = useState({
-        firstName: "",
-        lastName: "",
-        time: "12:00am",
-        day: "",
-        email: "",
-        message: ""
+        bigFirstName: "",
+        bigLastName: "",
+        bigTime: "12:00am",
+        bigDay: "",
+        bigEmail: "",
+        bigMessage: ""
     });
 
     const navigate = useNavigate();
