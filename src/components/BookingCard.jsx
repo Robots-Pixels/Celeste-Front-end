@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import ShinyButton from '../components/ShinyButton'
 import { useNavigate } from 'react-router-dom'
 import bgBlack from "../assets/bgBlack.jpg"
+import { meta } from '@eslint/js';
 
 
 export default function BookingCard() {
@@ -14,8 +15,6 @@ export default function BookingCard() {
         email: "",
         message: ""
     });
-
-    const API_BASE_URL = "celeste-back-end-production.up.railway.app";
 
     const navigate = useNavigate();
 
@@ -34,7 +33,7 @@ export default function BookingCard() {
         e.preventDefault();
         setLoading(true);
 
-        const res = await fetch(`${API_BASE_URL}/api/reservation/newReservation`,
+        const res = await fetch(`${import.meta.env.VITE_BACKEND_API_BASE_URL}/api/reservation/newReservation`,
             {
                 method: "POST",
                 headers: {

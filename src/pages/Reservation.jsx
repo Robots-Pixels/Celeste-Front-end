@@ -3,6 +3,7 @@ import Hero from '../components/Hero.jsx'
 import ShinyButton from '../components/ShinyButton'
 import { useNavigate } from 'react-router-dom'
 import bgBlack from "../assets/bgBlack.jpg"
+import { meta } from '@eslint/js'
 
 
 export default function Reservation() {
@@ -15,8 +16,6 @@ export default function Reservation() {
         bigEmail: "",
         bigMessage: ""
     });
-
-    const API_BASE_URL = "celeste-back-end-productione.up.railway.app";
 
     const navigate = useNavigate();
 
@@ -35,7 +34,7 @@ export default function Reservation() {
         e.preventDefault();
         setLoading(true);
 
-        const res = await fetch(`${API_BASE_URL}/api/reservation/newReservation`,
+        const res = await fetch(`${import.meta.env.VITE_BACKEND_API_BASE_URL}/api/reservation/newReservation`,
             {
                 method: "POST",
                 headers: {
