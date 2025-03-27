@@ -48,7 +48,7 @@ export default function HomeHero() {
   }
 
   return (
-    <div className='flex w-full h-[35rem] md:h-[41rem] overflow-x-hidden relative'>
+    <div className='flex w-full h-[35rem] md:h-[41rem] overflow-x-hidden relative z-3'>
       {
         sliderContent.map((content, index) => (
 

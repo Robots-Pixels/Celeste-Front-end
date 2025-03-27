@@ -8,8 +8,8 @@ export default function Testimonials() {
       <section className="w-full bg-[#2b2b2b] z-1">
           
           <div 
-            className={`h-160 md:h-100 bg-cover bg-no-repeat bg-fixed flex items-center`}
-            style={{backgroundImage: "url('/waves.svg')"}}
+            className={`h-160 md:h-100 bg-cover bg-no-repeat flex items-center`}
+            style={{backgroundImage: "url('/waves.svg')", backgroundAttachment: "fixed"}}
           >
 
             <div className="max-w-3xl md:max-w-6xl w-full mx-auto px-4 md:px-8">

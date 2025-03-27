@@ -6,11 +6,9 @@ import ShinyButton from './ShinyButton';
 import MiniAboutModal from './MiniAboutModal';
 import StickyHeader from './StickyHeader';
 
-export default function Header() {
+export default function Header({isSmall, setIsSmall, transformMini}) {
     const [clicked, setClicked] = useState(false);
-    const [transformMini, setTransformMini] = useState("500px");
     const [transformSide, setTransformSide] = useState("-700px");
-    const [isSmall, setIsSmall] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [transformSticky, setTransformSticky] = useState("0px");
     
@@ -18,13 +16,6 @@ export default function Header() {
         if (isSmall) {
             setClicked((prev) => !prev);
             setTransformSide((prev) => (prev === "0px" ? "-700px" : "0px"));
-        }
-    };
-    
-    const toggleMiniAbout = () => {
-        if (!isSmall) {
-            setClicked((prev) => !prev);
-            setTransformMini((prev) => (prev === "0px" ? "500px" : "0px"));
         }
     };
 
@@ -41,7 +32,6 @@ export default function Header() {
         const handleClickOutside = () => {
             if (!clicked){
                 setTransformSide("-700px");
-                setTransformMini("500px");
             }
             setClicked(false);
         }
@@ -136,12 +126,17 @@ export default function Header() {
                             </ShinyButton>
                         </div>
 
-                            
+
+                        {
+                            isSmall &&
                             <button
-                            onClick={isSmall ? toggleSideMenu : toggleMiniAbout}
+                            onClick={toggleSideMenu}
                             className='text-2xl text-[#cd9d4b] relative z-10'>
                                 <FaBars/>
                             </button>
+                        }
+                        
+                        
 
                         </div>
                     </div>

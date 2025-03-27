@@ -3,7 +3,6 @@ import ShinyButton from '../components/ShinyButton'
 import { useNavigate } from 'react-router-dom'
 import bgBlack from "../assets/bgBlack.jpg"
 
-
 export default function BookingCard() {
 
     const [formData, setFormData] = useState({
@@ -46,12 +45,21 @@ export default function BookingCard() {
         if (data.success === false){
             setError(data.message);
             setLoading(false);
+
+            setTimeout(() => {
+              setError("");
+          }, 2000);
+
             return;
         }
 
         if (data.success === true){
             setSuccessful(data.message);
             setLoading(false);
+
+            setTimeout(() => {
+              setSuccessful("");
+          }, 2000);
         }
 
         setTimeout(() => {
@@ -142,7 +150,6 @@ export default function BookingCard() {
                       &&
                   <h4 className='text-sm text-green-400'> {successful} </h4>
                 }
-
 
                 <button className={`text-xl ${loading ? "opacity-40" : ""}`} style={{transition: "opacity 0.1s"}}>
                   <ShinyButton>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Hero from '../components/Hero'
 import bgBlack from "../assets/bgBlack.jpg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -8,6 +8,11 @@ import ShinyButton from '../components/ShinyButton'
 import { useNavigate } from 'react-router-dom'
 
 export default function Contact() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0); // Remonte tout en haut
+      }, []);
+    
 
     const [formData, setFormData] = useState({
         name: "",

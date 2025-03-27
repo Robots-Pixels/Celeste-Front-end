@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Hero from "../components/Hero.jsx";
 import Story from "../components/Story.jsx";
 import Signature from "../components/Signature.jsx";
@@ -7,6 +7,10 @@ import CoreFeatures from "../components/CoreFeatures.jsx";
 
 
 export default function About() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Remonte tout en haut
+  }, []);
 
   return (
     <div className="flex flex-col">

@@ -1,10 +1,15 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Hero from '../components/Hero'
 import bgBlack from "../assets/bgBlack.jpg"
 import MenuItem from '../components/MenuItem'
 import { Link } from 'react-scroll'
 
 export default function Menu() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Remonte tout en haut
+  }, []);
+
 
     const [menu, setMenu] = useState([
         {

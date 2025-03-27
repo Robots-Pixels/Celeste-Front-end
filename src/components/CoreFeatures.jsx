@@ -4,8 +4,8 @@ export default function CoreFeatures() {
   return (
     <section className="w-full bg-[#2b2b2b] z-1">
       <div
-        className="h-120 md:h-54 bg-cover bg-no-repeat bg-fixed flex items-center"
-        style={{backgroundImage: "url(/waves.svg)"}}
+        className="h-120 md:h-54 bg-cover bg-no-repeat flex items-center"
+        style={{backgroundImage: "url(/waves.svg)", backgroundAttachment: "fixed"}}
       >
         <div className="max-w-3xl md:max-w-6xl mx-auto px-4 md:px-8">
           <div className="flex flex-col md:flex-row justify-center items-center text-center gap-4 md:gap-6">

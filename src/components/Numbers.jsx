@@ -3,11 +3,11 @@ import React from 'react'
 export default function Numbers() {
   return (
     <div>
-        <section className="w-full bg-[#2b2b2b] z-1">
+        <section className="w-full bg-[#2b2b2b] z-1 -mt-20 sm:mt-0">
             
             <div
-                className="h-120 md:h-30 bg-cover bg-no-repeat bg-fixed flex items-center"
-                style={{backgroundImage: "url(/waves.svg)"}}
+                className="h-120 md:h-30 bg-cover bg-no-repeat flex items-center sm:pb-10"
+                style={{backgroundImage: "url(/waves.svg)", backgroundAttachment: "fixed"}}
             >
 
         <div className="max-w-3xl md:max-w-6xl mx-auto px-4 md:px-8">

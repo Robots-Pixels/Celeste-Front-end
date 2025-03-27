@@ -1,9 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Hero from '../components/Hero'
 import bgBlack from "../assets/bgBlack.jpg"
 import Testimonials from '../components/Testimonials'
 
 export default function Gallery() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0); // Remonte tout en haut
+      }, []);
+    
 
     const [gallery, setGallery] = useState([
         "/gallery1.jpeg",

@@ -94,7 +94,6 @@ select option {
     right: 0;
 }
 
-
 @keyframes moveDot1 {
     0% {
         transform: translateX(0px) translateY(0px);
@@ -287,5 +286,11 @@ select option {
 
     .reservation-form-div{
         flex-direction: column;
+    }
+}
+
+@media (min-width: 52rem) {
+    .bg-at-fixed{
+        background-attachment: fixed;
     }
 }

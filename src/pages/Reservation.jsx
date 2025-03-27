@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Hero from '../components/Hero.jsx'
 import ShinyButton from '../components/ShinyButton'
 import { useNavigate } from 'react-router-dom'
 import bgBlack from "../assets/bgBlack.jpg"
 
 export default function Reservation() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Remonte tout en haut
+  }, []);
 
     const [formData, setFormData] = useState({
         bigFirstName: "",
@@ -45,12 +49,22 @@ export default function Reservation() {
         if (data.success === false){
             setError(data.message);
             setLoading(false);
+
+            setTimeout(() => {
+              setError("");
+            }, 2000);
+
             return;
         }
 
         if (data.success === true){
             setSuccessful(data.message);
             setLoading(false);
+
+
+            setTimeout(() => {
+              setSuccessful("");
+            }, 2000);
         }
 
         setTimeout(() => {
