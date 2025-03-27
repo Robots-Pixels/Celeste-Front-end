@@ -75,6 +75,14 @@ export default function Home() {
 
             setTimeout(() => {
               setBigSuccessful("");
+              setBigFormData({
+                bigFirstName: "",
+                bigLastName: "",
+                bigTime: "12:00am",
+                bigDay: "",
+                bigEmail: "",
+                bigMessage: ""
+              })
             }, 2000);
         }
 
