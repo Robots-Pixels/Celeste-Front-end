@@ -5,7 +5,7 @@ export default function HomeHero() {
 
   const [sliderContent, setSliderContent] = useState([
     {
-      image: "/hero1.jpeg",
+      image: "/hero1.webp",
       headtitle: "Welcome to the Celeste Luxury Restaurant",
       title: ["Savor the Extraordinary,", "Embrace the Celestial"],
       subtitle: "Experience world-class fine dining at Celeste, where gourmet flavors meet celestial elegance in Benin.",
@@ -13,7 +13,7 @@ export default function HomeHero() {
       destination: "/reservation"
     },
     {
-      image: "/hero2.jpeg",
+      image: "/hero2.webp",
       headtitle: "Welcome to the Celeste Luxury Restaurant",
       title: ["A Symphony of Flavors", "in Timeless Luxury"],
       subtitle: "Experience world-class fine dining at Celeste, where gourmet flavors meet celestial elegance in Benin.",
@@ -21,7 +21,7 @@ export default function HomeHero() {
       destination: "/menu"
     },
     {
-      image: "/hero3.jpeg",
+      image: "/hero3.webp",
       headtitle: "Welcome to the Celeste Luxury Restaurant",
       title: ["Dine Beneath the Stars,", "Indulge in Perfection"],
       subtitle: "Experience world-class fine dining at Celeste, where gourmet flavors meet celestial elegance in Benin.",

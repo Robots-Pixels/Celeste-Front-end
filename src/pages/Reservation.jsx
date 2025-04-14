@@ -82,13 +82,13 @@ export default function Reservation() {
 
   return (
     <div className='flex flex-col'>
-      <Hero image={"https://images.pexels.com/photos/31125216/pexels-photo-31125216.jpeg"} title={"RESERVATION"} subtitle={"Reserve your table and indulge in celestial flavors. Experience exquisite dining crafted just for you."}/>
+      <Hero image={"/reservation-hero.webp"} title={"RESERVATION"} subtitle={"Reserve your table and indulge in celestial flavors. Experience exquisite dining crafted just for you."}/>
 
       <section className='z-1 bg-center bg-cover bg-fixed py-30' style={{backgroundImage: `url(${bgBlack})`}}>
 
         <div className='flex flex-col-reverse md:flex-row items-stretch'>
 
-          <div className='relative bg-cover bg-center flex-1 min-h-100' style={{backgroundImage: `url(${"https://images.pexels.com/photos/1484516/pexels-photo-1484516.jpeg"})`}}>
+          <div className='relative bg-cover bg-center flex-1 min-h-100' style={{backgroundImage: `url(${"/reservation.webp"})`}}>
             <div className='absolute bg-black/30 w-full h-full'/>
           </div>
           

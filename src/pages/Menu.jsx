@@ -13,28 +13,28 @@ export default function Menu() {
 
     const [menu, setMenu] = useState([
         {
-          image: "/menu1.jpg",
+          image: "/menu1.webp",
           name: "Lobster Tartare",
           price: "22",
           description: "Fresh lobster with citrus zest, avocado cream, and delicate herbs.",
           category: "Starters",
         },
         {
-          image: "/menu2.jpg",
+          image: "/menu2.webp",
           name: "Truffle Mushroom Velouté",
           price: "16",
           description: "Smooth wild mushroom soup drizzled with white truffle oil.",
           category: "Starters",
         },
         {
-          image: "/menu3.jpg",
+          image: "/menu3.webp",
           name: "Caramelized Onion & Goat Cheese Tart",
           price: "14",
           description: "Flaky tart with sweet onions, goat cheese, and balsamic glaze.",
           category: "Starters",
         },
         {
-          image: "/menu4.jpg",
+          image: "/menu4.webp",
           name: "Smoked Salmon Blinis",
           price: "18",
           description: "Mini pancakes topped with smoked salmon and lemon crème fraîche.",
@@ -48,7 +48,7 @@ export default function Menu() {
             category: "Mains",
           },
           {
-            image: "/menu6.jpg",
+            image: "/menu6.webp",
             name: "Seared Duck Breast",
             price: "34",
             description: "Perfectly seared duck breast with orange glaze and seasonal greens.",
@@ -103,7 +103,7 @@ export default function Menu() {
 
     <div className="flex flex-col">
 
-        <Hero image={"/menu.jpeg"} title={"MENU"} subtitle={"Explore our menu and experience gourmet cuisine — carefully prepared dishes that delight every palate."}/>
+        <Hero image={"/menu.webp"} title={"MENU"} subtitle={"Explore our menu and experience gourmet cuisine — carefully prepared dishes that delight every palate."}/>
         
         <section className='z-1 bg-center bg-cover py-30' style={{backgroundImage: `url(${bgBlack})`}}>
 

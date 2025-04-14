@@ -11,12 +11,12 @@ export default function Gallery() {
     
 
     const [gallery, setGallery] = useState([
-        "/gallery1.jpeg",
-        "/gallery6.jpeg",
-        "/gallery2.jpeg",
-        "/gallery3.jpeg",
-        "/gallery4.jpeg",
-        "/gallery5.jpeg",
+        "/gallery1.webp",
+        "/gallery6.webp",
+        "/gallery2.webp",
+        "/gallery3.webp",
+        "/gallery4.webp",
+        "/gallery5.webp",
     ])
 
   return (

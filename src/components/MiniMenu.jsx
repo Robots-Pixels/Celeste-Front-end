@@ -6,14 +6,14 @@ export default function MiniMenu() {
 
     const [menu, setMenu] = useState([
         {
-          image: "/menu1.jpg",
+          image: "/menu1.webp",
           name: "Lobster Tartare",
           price: "22",
           description: "Fresh lobster with citrus zest, avocado cream, and delicate herbs.",
           category: "Starters",
         },
         {
-          image: "/menu4.jpg",
+          image: "/menu4.webp",
           name: "Smoked Salmon Blinis",
           price: "18",
           description: "Mini pancakes topped with smoked salmon and lemon crème fraîche.",
@@ -27,7 +27,7 @@ export default function MiniMenu() {
             category: "Mains",
           },
           {
-            image: "/menu6.jpg",
+            image: "/menu6.webp",
             name: "Seared Duck Breast",
             price: "34",
             description: "Perfectly seared duck breast with orange glaze and seasonal greens.",

@@ -228,21 +228,21 @@ export default function Home() {
 
       </section>
 
-      <SectionTitle bg={"/back1.jpeg"} title={"WHO ARE WE ?"}/>
+      <SectionTitle bg={"/back1.webp"} title={"WHO ARE WE ?"}/>
 
       <Story/>
 
       <CoreFeatures/>
 
-      <SectionTitle bg={"/back2.jpeg"} />
+      <SectionTitle bg={"/back2.webp"} />
 
       <Signature/>
 
-      <SectionTitle bg={"/back2.jpeg"} />
+      <SectionTitle bg={"/back2.webp"} />
 
       <MiniMenu/>
 
-      <SectionTitle bg={"/back3.jpeg"} title={"TESTIMONIALS"}/>
+      <SectionTitle bg={"/back3.webp"} title={"TESTIMONIALS"}/>
 
       <div className='flex flex-col relative'>
 
@@ -252,7 +252,7 @@ export default function Home() {
 
       </div>
 
-      <SectionTitle bg={"/back4.jpeg"} title={"RESERVATION"}/>
+      <SectionTitle bg={"/back4.webp"} title={"RESERVATION"}/>
 
       <BookingCard/>
 

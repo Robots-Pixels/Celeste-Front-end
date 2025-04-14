@@ -73,7 +73,7 @@ export default function BookingCard() {
 
         <div className='flex flex-col-reverse md:flex-row items-stretch'>
 
-          <div className='relative bg-cover bg-center flex-1 min-h-100' style={{backgroundImage: `url(${"/reservation.jpeg"})`}}>
+          <div className='relative bg-cover bg-center flex-1 min-h-100' style={{backgroundImage: `url(${"/reservation.webp"})`}}>
             <div className='absolute bg-black/30 w-full h-full'/>
           </div>
           

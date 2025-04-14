@@ -114,11 +114,19 @@ export default function StickyHeader({scrolled}) {
                     </div>
 
                         
-                        <button
-                        onClick={isSmall ? toggleSideMenu : toggleMiniAbout}
-                        className='text-2xl text-[#cd9d4b] relative z-10'>
-                            <FaBars/>
-                        </button>
+                        {
+                            isSmall 
+                            
+                                &&
+
+                            <button
+                            onClick={toggleSideMenu}
+                            className='text-2xl text-[#cd9d4b] relative z-10'>
+                                <FaBars/>
+                            </button>
+                        }
+
+
 
                     </div>
                 </div>
